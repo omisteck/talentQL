@@ -13,23 +13,16 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const moment_1 = __importDefault(require("moment"));
-const express_validator_1 = require("express-validator");
 class indexController {
     calculate(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
-            yield (0, express_validator_1.check)('dob').isDate()
-                .withMessage('invalid date please enter date in this format 1996-01-20')
-                .run(req);
-            const result = (0, express_validator_1.validationResult)(req);
-            if (!result.isEmpty()) {
-                return res.status(400).json({ errors: result.array() });
-            }
+            let years;
             let dob = req.query.dob;
-            var years = (0, moment_1.default)().diff(dob, 'years', false);
+            if (dob = new Date(parseInt(dob))) {
+                years = (0, moment_1.default)().diff(dob, 'years', false);
+            }
             res.json({
-                "birthDate": dob,
-                "currentDate": (0, moment_1.default)().format("YYYY-MM-DD"),
-                "age": years
+                "age": (years && years >= 0) ? years : null
             });
         });
     }
