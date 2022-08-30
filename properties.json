@@ -3,6 +3,6 @@
     "track": "backend",
     "email": "talk2omis@gmail.com",
     "githubUsername": "omisteck",
-    "deployedAppURL": "",
+    "deployedAppURL": "https://talentql.herokuapp.com",
     "explainer": ""
 }
