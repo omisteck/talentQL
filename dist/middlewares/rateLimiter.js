@@ -8,7 +8,7 @@ const express_rate_limit_1 = __importDefault(require("express-rate-limit"));
 exports.requestRateLimiter = (0, express_rate_limit_1.default)({
     windowMs: 3 * 1000,
     max: 3,
-    message: 'You have exceeded the 3 requests in 60 second limit!',
+    message: 'You have exceeded the 3 requests in 3 second limit!',
     standardHeaders: true,
     legacyHeaders: false,
 });

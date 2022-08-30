@@ -16,7 +16,7 @@ const moment_1 = __importDefault(require("moment"));
 class indexController {
     calculate(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
-            let years;
+            let years = null;
             let dob = req.query.dob;
             if (dob = new Date(parseInt(dob))) {
                 years = (0, moment_1.default)().diff(dob, 'years', false);
