@@ -21,8 +21,9 @@ class indexController {
             if (dob = new Date(parseInt(dob))) {
                 years = (0, moment_1.default)().diff(dob, 'years', false);
             }
-            res.json({
-                "age": (years && years >= 0) ? years : null
+            let statusCode = (years != null) ? 200 : 400;
+            res.status(statusCode).json({
+                "age": years
             });
         });
     }

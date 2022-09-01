@@ -15,6 +15,6 @@ app.use(helmet());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get('/howold', requestRateLimiter , indexRoute.calculate );
+app.get('/howold', requestRateLimiter, indexRoute.calculate);
 
 app.listen(PORT, () => console.log(`Running on ${PORT} ⚡`));
