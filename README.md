@@ -1,3 +1,4 @@
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/71775762ea224aa3babaf418b9a97f49)](https://www.codacy.com/gh/omisteck/talentQL/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=omisteck/talentQL&amp;utm_campaign=Badge_Grade)
 # Backend Assessment
 
 Build and deploy a very simple API that does the following
